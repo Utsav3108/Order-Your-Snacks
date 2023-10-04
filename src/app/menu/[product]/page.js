@@ -7,7 +7,7 @@ import ArrowButton from "@/components/ArrowButton";
 
 const page = ({ searchParams }) => {
   const type = (searchParams.type === "true");
-  
+
   return (
     <>
     <ArrowButton />

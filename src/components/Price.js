@@ -3,10 +3,14 @@ import Link from "next/link";
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+import { useContext } from "react";
+import { CartContext } from "@/context/cart-contex";
 
-const Price = ({ price, id }) => {
+const Price = ({ price, id, name, src, desc}) => {
     const [total,setTotal] = useState(price);
     const [quantity,setQuantity] = useState(1);
+
+    const {addToCart,dishes} = useContext(CartContext);
 
     useEffect(()=>{
         setTotal(quantity*price)
@@ -26,7 +30,7 @@ const Price = ({ price, id }) => {
           </div>
         </div>
         <Link href="/cart" className="bg-[#ee5f35] my-3 font-semibold px-3 py-2 rounded-full text-sm md:text-md hover:bg-white hover:text-black transition-all delay-100 ease-in-out">
-          Order Now
+          Add To Cart
         </Link>
       </div>
     </div>

@@ -1,13 +1,23 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import { GrFormClose } from "react-icons/gr";
+import { useState } from "react";
 
 const page = () => {
+
+  const [show, setShow] = useState(true);
+  const showHandler = () => {
+    setShow(!show);
+  };
+
   return (
     <div className="h-[calc(100vh-6rem)] md:h-[calc(100vh-9rem)] flex flex-col md:items-center md:flex-row">
       <div className="h-1/2 p-4 flex flex-col justify-center overflow-scroll md:h-full md:w-2/3 xl:w-1/2">
-        <div className="flex items-center justify-between mb-4">
+        <div
+          className={`flex items-center justify-between mb-4 ${
+            show ? "block" : "hidden"
+          }`}
+        >
           <Image
             className="rounded-md"
             src="https://i.pinimg.com/474x/d9/92/b7/d992b718fa2dc8d471314d1ebbef6c6f.jpg"
@@ -20,7 +30,12 @@ const page = () => {
             <span className="text-md text-gray-600">Modern Fusion</span>
           </div>
           <h2 className="font-bold">₹150</h2>
-          <span className="cursor-pointer hover:text-[#ee5f35]">X</span>
+          <span
+            className="cursor-pointer hover:text-[#ee5f35]"
+            onClick={showHandler}
+          >
+            X
+          </span>
         </div>
         <div className="flex items-center justify-between mb-4">
           <Image

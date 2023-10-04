@@ -4,7 +4,9 @@ import React from "react";
 import { AiFillClockCircle, AiFillStar } from "react-icons/ai";
 import indianFoodItems from "@/data";
 
+
 const page = () => {
+
   return (
     <div className="">
       <div className="my-5">
@@ -16,7 +18,7 @@ const page = () => {
         {indianFoodItems.map((item) => (
           <Link
             key={item.name}
-            className="w-full bg-[#080808] my-3 h-[60vh] sm:w-[45%]  lg:w-[30%] p-4 rounded-xl  transition-all ease-in hover:border-[0.5px]  hover:shadow-2xl hover:shadow-gray-700 border-gray-600"
+            className="w-full bg-[#080808] my-3 md:h-[500px] h-[60vh] sm:w-[45%] lg:w-[30%] p-4 rounded-xl  transition-all ease-in hover:border-[0.5px]  hover:shadow-2xl hover:shadow-gray-700 border-gray-600"
             // href={`/menu/${item.name}`}
             href={{
               pathname: `/menu/${item.name}`,

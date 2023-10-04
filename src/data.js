@@ -138,12 +138,12 @@ const indianFoodItems = [
     price: 180,
   },
   {
-    name: "Rasgulla",
+    name: "Jalebi",
     description:
-      "Soft and spongy dessert made from chhena (Indian cottage cheese) and sugar syrup.",
-    cuisine: "Bengali",
+      "A sweet and syrupy dessert made by deep-frying wheat flour batter and soaking it in sugar syrup.",
+    cuisine: "Indian Sweet",
     vegetarian: true,
-    url: "https://i.pinimg.com/474x/fa/72/98/fa729889825f3c0f16ef60b179308fc3.jpg",
+    url: "https://i.pinimg.com/474x/65/a5/46/65a546fc134637e04cd366f63c1ab2e1.jpg",
     rating: 4.5,
     time: 10,
     price: 120,
